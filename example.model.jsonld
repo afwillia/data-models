@@ -2185,7 +2185,7 @@
             "sms:displayName": "Family History",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "list like"
+                "list strict"
             ]
         },
         {
