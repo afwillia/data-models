@@ -2482,6 +2482,11 @@
             },
             "sms:displayName": "MockComponent",
             "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Patient"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Component"
