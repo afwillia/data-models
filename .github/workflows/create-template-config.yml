@@ -67,7 +67,7 @@ jobs:
             df <- create_template_config(data_model)
             write_json(df, file)
           }
-          create_json_template_config( ${{ inputs.data_model }}, ${{ inputs.path }})
+          create_json_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
         
       - name: Open PR
