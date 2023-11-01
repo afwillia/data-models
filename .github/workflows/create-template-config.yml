@@ -23,7 +23,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install packages
-        run: install.packages(c("dplyr", "httr", "jsonlite")
+        run: install.packages(c("dplyr", "httr", "jsonlite"))
         shell: Rscript {0}
         
       - name: Create config file
