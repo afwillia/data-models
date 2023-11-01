@@ -30,7 +30,6 @@ jobs:
         run: |
           library(httr)
           library(dplyr)
-          library(readr)
           library(jsonlite)
           graph_by_edge_type <- function(url = "https://schematic-dev.api.sagebionetworks.org/v1/schemas/get/graph_by_edge_type",
                                          schema_url, relationship = "requiresDependency") {
