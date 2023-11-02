@@ -15,7 +15,7 @@ jobs:
   create-template-config:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -77,7 +77,18 @@ jobs:
           }
           create_json_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
+
+      - name: Checkout DCA Config Repo for Schema
+        uses: actions/checkout@v4
+        with:
+          repository: 'Sage-Bionetworks/data_curator_config'
         
+      - name: Validate Config File
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: 'Sage-Bionetworks/schemas/dca_template_config.schema.json'
+          INPUT_JSONS: ${{ inputs.path }}
+      
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
