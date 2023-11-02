@@ -26,7 +26,7 @@ jobs:
       - name: Create config file
         run: |
           install.packages("remotes")
-          remotes::install_github("Sage-Bionetworks/data_curator@rc.23.11.1")
+          remotes::install_github("Sage-Bionetworks/data_curator@rc.23.11.1", auth_token = ${{ secrets.GITHUB_TOKEN }})
           datacurator::write_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
         
