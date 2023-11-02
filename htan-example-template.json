@@ -1,0 +1,391 @@
+{
+  "manifests": [
+    {
+      "display_name": "10x Visium Spatial Transcriptomics - Auxiliary Files",
+      "component": "10xVisiumSpatialTranscriptomics-AuxiliaryFiles",
+      "type": "file"
+    },
+    {
+      "display_name": "10x Visium Spatial Transcriptomics - RNA-seq Level 1",
+      "component": "10xVisiumSpatialTranscriptomics-RNA-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "10x Visium Spatial Transcriptomics - RNA-seq Level 2",
+      "component": "10xVisiumSpatialTranscriptomics-RNA-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "10x Visium Spatial Transcriptomics - RNA-seq Level 3",
+      "component": "10xVisiumSpatialTranscriptomics-RNA-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "10x Visium Spatial Transcriptomics - RNA-seq Level 4",
+      "component": "10xVisiumSpatialTranscriptomics-RNA-seqLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "Acute Lymphoblastic Leukemia Tier 3",
+      "component": "AcuteLymphoblasticLeukemiaTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Biospecimen",
+      "component": "Biospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "Breast Cancer Tier 3",
+      "component": "BreastCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Bulk Methylation-seq Level 1",
+      "component": "BulkMethylation-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk Methylation-seq Level 2",
+      "component": "BulkMethylation-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk Methylation-seq Level 3",
+      "component": "BulkMethylation-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk RNA-seq Level 1",
+      "component": "BulkRNA-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk RNA-seq Level 2",
+      "component": "BulkRNA-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk RNA-seq Level 3",
+      "component": "BulkRNA-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk WES Level 1",
+      "component": "BulkWESLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk WES Level 2",
+      "component": "BulkWESLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Bulk WES Level 3",
+      "component": "BulkWESLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Clinical Data Tier 2",
+      "component": "ClinicalDataTier2",
+      "type": "record"
+    },
+    {
+      "display_name": "Colorectal Cancer Tier 3",
+      "component": "ColorectalCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Demographics",
+      "component": "Demographics",
+      "type": "record"
+    },
+    {
+      "display_name": "Diagnosis",
+      "component": "Diagnosis",
+      "type": "record"
+    },
+    {
+      "display_name": "Electron Microscopy Level 1",
+      "component": "ElectronMicroscopyLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 2",
+      "component": "ElectronMicroscopyLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 3",
+      "component": "ElectronMicroscopyLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Electron Microscopy Level 4",
+      "component": "ElectronMicroscopyLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "Exposure",
+      "component": "Exposure",
+      "type": "record"
+    },
+    {
+      "display_name": "Family History",
+      "component": "FamilyHistory",
+      "type": "record"
+    },
+    {
+      "display_name": "Follow Up",
+      "component": "FollowUp",
+      "type": "record"
+    },
+    {
+      "display_name": "HI-C-seq Level 1",
+      "component": "HI-C-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "HI-C-seq Level 2",
+      "component": "HI-C-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "HI-C-seq Level 3",
+      "component": "HI-C-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "HTAN RPPA Antibody Table",
+      "component": "HTANRPPAAntibodyTable",
+      "type": "file"
+    },
+    {
+      "display_name": "Imaging Level 1",
+      "component": "ImagingLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Imaging Level 2",
+      "component": "ImagingLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Imaging Level 3 Image",
+      "component": "ImagingLevel3Image",
+      "type": "file"
+    },
+    {
+      "display_name": "Imaging Level 3 Segmentation",
+      "component": "ImagingLevel3Segmentation",
+      "type": "file"
+    },
+    {
+      "display_name": "Imaging Level 4",
+      "component": "ImagingLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "Lung Cancer Tier 3",
+      "component": "LungCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Mass Spectrometry Auxiliary File",
+      "component": "MassSpectrometryAuxiliaryFile",
+      "type": "file"
+    },
+    {
+      "display_name": "Mass Spectrometry Level 1",
+      "component": "MassSpectrometryLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Mass Spectrometry Level 2",
+      "component": "MassSpectrometryLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Mass Spectrometry Level 3",
+      "component": "MassSpectrometryLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Mass Spectrometry Level 4",
+      "component": "MassSpectrometryLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "Melanoma Tier 3",
+      "component": "MelanomaTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Molecular Test",
+      "component": "MolecularTest",
+      "type": "record"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 1",
+      "component": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "NanoString GeoMx DSP Spatial Transcriptomics Level 3",
+      "component": "NanoStringGeoMxDSPSpatialTranscriptomicsLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Neuroblastoma and Glioma Tier 3",
+      "component": "NeuroblastomaandGliomaTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Other Assay",
+      "component": "OtherAssay",
+      "type": "file"
+    },
+    {
+      "display_name": "Ovarian Cancer Tier 3",
+      "component": "OvarianCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Pancreatic Cancer Tier 3",
+      "component": "PancreaticCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Patient",
+      "component": "Patient",
+      "type": "record"
+    },
+    {
+      "display_name": "Prostate Cancer Tier 3",
+      "component": "ProstateCancerTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "Publication Manifest",
+      "component": "PublicationManifest",
+      "type": "record"
+    },
+    {
+      "display_name": "RPPA Level 2",
+      "component": "RPPALevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "RPPA Level 3",
+      "component": "RPPALevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "RPPA Level 4",
+      "component": "RPPALevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "SRRS Biospecimen",
+      "component": "SRRSBiospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "SRRS Clinical Data Tier 2",
+      "component": "SRRSClinicalDataTier2",
+      "type": "record"
+    },
+    {
+      "display_name": "SRRS Imaging Level 2",
+      "component": "SRRSImagingLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Sarcoma Tier 3",
+      "component": "SarcomaTier3",
+      "type": "record"
+    },
+    {
+      "display_name": "scATAC-seq Level 1",
+      "component": "ScATAC-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "scATAC-seq Level 2",
+      "component": "ScATAC-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "scATAC-seq Level 3",
+      "component": "ScATAC-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "scATAC-seq Level 4",
+      "component": "ScATAC-seqLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "scDNA-seq Level 1",
+      "component": "ScDNA-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "scDNA-seq Level 2",
+      "component": "ScDNA-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNA-seq Level 1",
+      "component": "ScRNA-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNA-seq Level 2",
+      "component": "ScRNA-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNA-seq Level 3",
+      "component": "ScRNA-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNA-seq Level 4",
+      "component": "ScRNA-seqLevel4",
+      "type": "file"
+    },
+    {
+      "display_name": "scmC-seq Level 1",
+      "component": "ScmC-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "scmC-seq Level 2",
+      "component": "ScmC-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 1",
+      "component": "Slide-seqLevel1",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 2",
+      "component": "Slide-seqLevel2",
+      "type": "file"
+    },
+    {
+      "display_name": "Slide-seq Level 3",
+      "component": "Slide-seqLevel3",
+      "type": "file"
+    },
+    {
+      "display_name": "Therapy",
+      "component": "Therapy",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.9.3",
+  "schema_version": ""
+}
