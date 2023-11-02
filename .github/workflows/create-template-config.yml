@@ -24,58 +24,14 @@ jobs:
           use-public-rspm: true
 
       - name: Install packages
-        run: install.packages(c("dplyr", "httr", "jsonlite"))
+        run: |
+          install.packages("remotes")
+          remotes::install_github("Sage-Bionetworks/data_curator", "rc.23.11.1")
         shell: Rscript {0}
         
       - name: Create config file
         run: |
-          library(httr)
-          library(dplyr)
-          library(jsonlite)
-          graph_by_edge_type <- function(url = "https://schematic-dev.api.sagebionetworks.org/v1/schemas/get/graph_by_edge_type",
-                                         schema_url, relationship = "requiresDependency") {
-            req <- httr::GET(url = url,
-                      query = list(
-                        schema_url = schema_url,
-                        relationship = relationship
-                      ))
-              httr::content(req)
-          }
-          format_edge_type <- function(edge_types) {
-            et <- bind_rows(lapply(edge_types, function(x) data.frame(value=x[[2]], schema_name=x[[1]])))
-            et |> filter(value %in% c("Component", "Filename")) |> 
-              group_by(schema_name) |> 
-              summarise(file_based = "Filename" %in% value)
-          }
-          get_display_names <- function(qlist) {
-            if (!"schema_url" %in% names(qlist)) stop("qlist needs element named `schema_url`")
-            if (!"node_list" %in% names(qlist)) stop("qlist needs at least one element named `node_list`")
-            httr::GET(url = "https://schematic-dev.api.sagebionetworks.org/v1/schemas/get_nodes_display_names",
-                      query = qlist
-                      )
-          }
-          create_template_config <- function(data_model) {
-            edges <- graph_by_edge_type(schema_url = data_model)
-            schema_names <- format_edge_type(edges)
-            nl <- setNames(as.list(schema_names$schema_name), rep("node_list", length(schema_names$schema_name)))
-            dnames <- get_display_names(c(schema_url = data_model, nl)) |> httr::content()
-            data.frame(display_name = unlist(dnames), schema_name = unlist(nl)) |>
-              left_join(schema_names, by = "schema_name") |>
-              mutate(type = ifelse(file_based, "file", "record")) |>
-              select(-file_based)
-          }
-          create_json_template_config <- function(data_model, file) {
-            df <- create_template_config(data_model)
-            schematic_version <- httr::GET("https://schematic-dev.api.sagebionetworks.org/v1/version") |>
-              httr::content()
-            json <- list(
-              manifest_schemas = df,
-              service_version = schematic_version,
-              schema_version = ""
-            )
-            write_json(json, file, pretty = TRUE, auto_unbox = TRUE)
-          }
-          create_json_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
+          datacurator::write_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
 
       - name: Checkout DCA Config Repo for Schema
