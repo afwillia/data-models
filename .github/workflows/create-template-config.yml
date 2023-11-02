@@ -42,8 +42,8 @@ jobs:
           }
           format_edge_type <- function(edge_types) {
             et <- bind_rows(lapply(edge_types, function(x) data.frame(value=x[[2]], component=x[[1]])))
-            et %>% filter(value %in% c("Component", "Filename")) %>% 
-              group_by(component) %>% 
+            et |> filter(value %in% c("Component", "Filename")) |> 
+              group_by(component) |> 
               summarise(file_based = "Filename" %in% value)
           }
           get_display_names <- function(qlist) {
@@ -57,15 +57,22 @@ jobs:
             edges <- graph_by_edge_type(schema_url = data_model)
             components <- format_edge_type(edges)
             nl <- setNames(as.list(components$component), rep("node_list", length(components$component)))
-            dnames <- get_display_names(c(schema_url = data_model, nl)) %>% httr::content()
-            data.frame(component = unlist(nl), display_name = unlist(dnames)) %>%
-              left_join(components, by = "component") %>%
-              mutate(record_type = ifelse(file_based, "file", "record")) %>%
+            dnames <- get_display_names(c(schema_url = data_model, nl)) |> httr::content()
+            data.frame(display_name = unlist(dnames), component = unlist(nl)) |>
+              left_join(components, by = "component") |>
+              mutate(type = ifelse(file_based, "file", "record")) |>
               select(-file_based)
           }
           create_json_template_config <- function(data_model, file) {
             df <- create_template_config(data_model)
-            write_json(df, file)
+            schematic_version <- httr::GET("https://schematic-dev.api.sagebionetworks.org/v1/version") |>
+              httr::content()
+            json <- list(
+              manifests = df,
+              service_version = schematic_version,
+              schema_version = ""
+            )
+            write_json(json, file, pretty = TRUE, auto_unbox = TRUE)
           }
           create_json_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
