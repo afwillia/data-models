@@ -43,7 +43,7 @@ jobs:
           }
           format_edge_type <- function(edge_types) {
             et <- bind_rows(lapply(edge_types, function(x) data.frame(value=x[[2]], schema_name=x[[1]])))
-            et |> filter(value %in% c("schema_name", "Filename")) |> 
+            et |> filter(value %in% c("Component", "Filename")) |> 
               group_by(schema_name) |> 
               summarise(file_based = "Filename" %in% value)
           }
