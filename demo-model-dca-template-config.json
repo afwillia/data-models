@@ -1,0 +1,31 @@
+{
+  "manifests": [
+    {
+      "display_name": "Biospecimen",
+      "component": "Biospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "Bulk RNA-seq Assay",
+      "component": "BulkRNA-seqAssay",
+      "type": "file"
+    },
+    {
+      "display_name": "MockComponent",
+      "component": "MockComponent",
+      "type": "record"
+    },
+    {
+      "display_name": "Other Assay",
+      "component": "OtherAssay",
+      "type": "file"
+    },
+    {
+      "display_name": "Patient",
+      "component": "Patient",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.9.3",
+  "schema_version": ""
+}
