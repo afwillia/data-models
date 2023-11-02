@@ -82,7 +82,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'Sage-Bionetworks/data_curator_config'
-          ref: 'config-refactor'
+          ref: 'dev'
           path: 'data_curator_config'
         
       - name: Validate Config File
