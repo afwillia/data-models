@@ -23,17 +23,13 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Install packages
-        run: |
-          install.packages("remotes")
-          remotes::install_github("Sage-Bionetworks/data_curator", "rc.23.11.1")
-        shell: Rscript {0}
-        
       - name: Create config file
         run: |
+          install.packages("remotes")
+          remotes::install_github("Sage-Bionetworks/data_curator@rc.23.11.1")
           datacurator::write_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
-
+        
       - name: Checkout DCA Config Repo for Schema
         uses: actions/checkout@v4
         with:
