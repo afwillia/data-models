@@ -82,11 +82,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'Sage-Bionetworks/data_curator_config'
+          path: 'data_curator_config'
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
-          INPUT_SCHEMA: 'Sage-Bionetworks/schemas/dca_template_config.schema.json'
+          INPUT_SCHEMA: 'data_curator_config/schemas/dca_template_config.schema.json'
           INPUT_JSONS: ${{ inputs.path }}
       
       - name: Open PR
