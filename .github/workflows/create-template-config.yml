@@ -1,3 +1,4 @@
+name: Create DCA Template Config File
 on:
   repository_dispatch:
     types: generate_templates
@@ -80,8 +81,8 @@ jobs:
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
         with:
-          title: Automatic Template Config
-          body: Template updates triggered by repository dispatch from a data model repository.
+          title: Update DCA Template Config File
+          body: Recreate the json file that populates the DCA template dropdown menu.
           delete-branch: true
           branch-suffix: timestamp
           add-paths: |
