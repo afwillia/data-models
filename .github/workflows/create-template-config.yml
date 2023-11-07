@@ -1,7 +1,23 @@
+# --------------------------------------------------------------------------------------------------
+# GitHub Action to create a DCA template config json file for a data model
+# 
+# This action creates a json file named with the `path` input argument using 
+# the data model supplied to the `data_model` argument. It will validate the 
+# json file against DCA's template config schema. Finally, it will create a PR
+# in the repo for the new file.
+#
+# Copy this into your data model repo .github/workflow directory.
+# Your repo settings must have Actions enabled and must allow GitHub Actions to
+# create and approve pull requests.
+# 
+# By default, this action runs by workflow dispatch. But it can be configured
+# to run on other triggers. Consult the github doc below for more information.
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+#
+# --------------------------------------------------------------------------------------------------
+
 name: Create DCA Template Config File
 on:
-  repository_dispatch:
-    types: generate_templates
   workflow_dispatch:
     inputs:
       data_model:
