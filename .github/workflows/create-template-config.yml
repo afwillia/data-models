@@ -27,7 +27,7 @@ jobs:
         run: |
           install.packages("remotes")
           remotes::install_github("Sage-Bionetworks/data_curator@rc.23.11.1", auth_token = "${{ github.token }}" )
-          datacurator::write_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
+          datacurator::write_dca_template_config( "${{ inputs.data_model }}", "${{ inputs.path }}")
         shell: Rscript {0}
         
       - name: Checkout DCA Config Repo for Schema
