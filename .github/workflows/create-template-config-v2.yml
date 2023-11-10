@@ -20,7 +20,7 @@
 #
 # --------------------------------------------------------------------------------------------------
 
-name: Create DCA Template Config File
+name: DCA Template Config File
 on:
   workflow_dispatch:
     inputs:
