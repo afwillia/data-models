@@ -44,8 +44,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Create config file
-        uses: sage-bionetworks/dca-template-config-action@main
-        with:
+        uses: sage-bionetworks/dca-template-config-action@intial-setup
+        env:
           data-model: ${{ inputs.data_model }}
           path: ${{ inputs.path }}
         
