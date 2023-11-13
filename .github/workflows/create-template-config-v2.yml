@@ -37,6 +37,8 @@ on:
         description: Commma-separated string of schemas to exclude from output. Must be empty if using include_schemas.
         required: false
         
+permissions: write-all
+
 jobs:
   create-template-config:
     runs-on: ubuntu-latest
