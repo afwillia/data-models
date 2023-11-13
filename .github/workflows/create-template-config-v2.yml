@@ -45,18 +45,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create config file
-        uses: sage-bionetworks/dca-template-config-action@main
-        env:
-          data_model: ${{ inputs.data_model }}
-          path: ${{ inputs.path }}
-        
       - name: Checkout DCA Config Repo for Schema
         uses: actions/checkout@v4
         with:
           repository: 'Sage-Bionetworks/data_curator_config'
           ref: 'dev'
           path: 'data_curator_config'
+
+      - name: Create config file
+        uses: sage-bionetworks/dca-template-config-action@main
+        env:
+          data_model: ${{ inputs.data_model }}
+          path: ${{ inputs.path }}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
