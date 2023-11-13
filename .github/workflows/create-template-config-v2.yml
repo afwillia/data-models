@@ -46,7 +46,7 @@ jobs:
       - name: Create config file
         uses: sage-bionetworks/dca-template-config-action@main
         env:
-          data-model: ${{ inputs.data_model }}
+          data_model: ${{ inputs.data_model }}
           path: ${{ inputs.path }}
         
       - name: Checkout DCA Config Repo for Schema
