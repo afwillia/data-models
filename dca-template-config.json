@@ -1,0 +1,26 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "Biospecimen",
+      "schema_name": "Biospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "Bulk RNA-seq Assay",
+      "schema_name": "BulkRNA-seqAssay",
+      "type": "file"
+    },
+    {
+      "display_name": "MockComponent",
+      "schema_name": "MockComponent",
+      "type": "record"
+    },
+    {
+      "display_name": "Other Assay",
+      "schema_name": "OtherAssay",
+      "type": "file"
+    }
+  ],
+  "service_version": "v23.11.1-docker",
+  "schema_version": ""
+}
