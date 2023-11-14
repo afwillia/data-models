@@ -27,7 +27,7 @@ on:
       data_model:
         description: URL to a jsonld data model file
         required: true
-      path:
+      file:
         description: Directory to save the template config
         required: true
       include_schemas:
@@ -56,7 +56,7 @@ jobs:
         uses: sage-bionetworks/dca-template-config-action@main
         env:
           data_model: ${{ inputs.data_model }}
-          path: ${{ inputs.file }}
+          file: ${{ inputs.file }}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
