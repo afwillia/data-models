@@ -55,6 +55,8 @@ jobs:
         env:
           data_model: ${{ inputs.data_model }}
           file: ${{ inputs.file }}
+          include_schemas: ${{ inputs.include_schemas }}
+          exclude_schemas: ${{ inputs.exclude_schemas }}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
