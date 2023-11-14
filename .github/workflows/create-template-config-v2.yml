@@ -56,7 +56,7 @@ jobs:
         uses: sage-bionetworks/dca-template-config-action@main
         env:
           data_model: ${{ inputs.data_model }}
-          path: ${{ inputs.path }}
+          path: ${{ inputs.file }}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
