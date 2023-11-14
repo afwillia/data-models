@@ -28,7 +28,7 @@ on:
         description: URL to a jsonld data model file
         required: true
       file:
-        description: Directory to save the template config
+        description: Filename to save the template config
         required: true
       include_schemas:
         description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
