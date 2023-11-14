@@ -1,0 +1,16 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "Biospecimen",
+      "schema_name": "Biospecimen",
+      "type": "record"
+    },
+    {
+      "display_name": "Patient",
+      "schema_name": "Patient",
+      "type": "record"
+    }
+  ],
+  "service_version": "v23.11.1-docker",
+  "schema_version": ""
+}
