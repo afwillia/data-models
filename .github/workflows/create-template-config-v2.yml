@@ -1,7 +1,7 @@
 # --------------------------------------------------------------------------------------------------
 # GitHub Action to create a DCA template config json file for a data model
 # 
-# This action creates a json file named with the `path` input argument using 
+# This action creates a json file named with the `file` input argument using 
 # the data model supplied to the `data_model` argument. It will validate the 
 # json file against DCA's template config schema. Finally, it will create a PR
 # in the repo for the new file.
@@ -36,8 +36,6 @@ on:
       exlude_schemas:
         description: Commma-separated string of schemas to exclude from output. Must be empty if using include_schemas.
         required: false
-        
-permissions: write-all
 
 jobs:
   create-template-config:
@@ -62,7 +60,7 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: 'data_curator_config/schemas/dca_template_config.schema.json'
-          INPUT_JSONS: ${{ inputs.path }}
+          INPUT_JSONS: ${{ inputs.file }}
       
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
@@ -72,4 +70,4 @@ jobs:
           delete-branch: true
           branch-suffix: timestamp
           add-paths: |
-            ${{ inputs.path }}
+            ${{ inputs.file }}
