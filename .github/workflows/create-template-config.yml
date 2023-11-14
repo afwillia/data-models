@@ -31,10 +31,10 @@ on:
         description: Directory to save the template config
         required: true
       include_schemas:
-        description: Comma-separated string of schemas to include in output. Must be empty if using exclude_schemas.
+        description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
         required: false
-      exlude_schemas:
-        description: Commma-separated string of schemas to exclude from output. Must be empty if using include_schemas.
+      exclude_schemas:
+        description: Space-separated string of schemas to exclude from output. Must be empty if using include_schemas.
         required: false
 
 jobs:
