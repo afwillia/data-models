@@ -611,7 +611,9 @@
             },
             "sms:displayName": "Filename",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": {
+                "Filename": "filenameExists"
+            }
         },
         {
             "@id": "bts:FileFormat",
