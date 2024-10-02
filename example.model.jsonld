@@ -612,7 +612,7 @@
             "sms:displayName": "Filename",
             "sms:required": "sms:true",
             "sms:validationRules": {
-                "MockFilename": "filenameExists"
+                "Filename": "filenameExists"
             }
         },
         {
@@ -1350,31 +1350,6 @@
             },
             "sms:displayName": "gh",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MockFilename",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MockFilename",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MockFilename",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
-                {
-                    "@id": "bts:Filename"
-                }
-            ],
             "sms:validationRules": []
         }
     ],
